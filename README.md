@@ -69,9 +69,9 @@ function reverseFetcher(nodeID, callback) {
 
 [npm-image]: https://img.shields.io/npm/v/graph-suggestions.svg?style=flat
 [npm-url]: https://npmjs.org/package/graph-suggestions
-[travis-image]: https://img.shields.io/travis/jhurliman/graph-suggestions.svg?style=flat
-[travis-url]: https://travis-ci.org/jhurliman/graph-suggestions
-[coveralls-image]: https://img.shields.io/coveralls/jhurliman/graph-suggestions.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/jhurliman/graph-suggestions?branch=master
+[travis-image]: https://img.shields.io/travis/jhurliman/node-graph-suggestions.svg?style=flat
+[travis-url]: https://travis-ci.org/jhurliman/node-graph-suggestions
+[coveralls-image]: https://img.shields.io/coveralls/jhurliman/node-graph-suggestions.svg?style=flat
+[coveralls-url]: https://coveralls.io/r/jhurliman/node-graph-suggestions?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/graph-suggestions.svg?style=flat
 [downloads-url]: https://npmjs.org/package/graph-suggestions
