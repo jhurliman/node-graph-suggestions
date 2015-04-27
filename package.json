@@ -1,0 +1,45 @@
+{
+  "name": "graph-suggestions",
+  "version": "1.0.0",
+  "description": "Provides \"people you should follow\" or other graph-based recommendations",
+  "scripts": {
+    "test": "mocha --bail --reporter spec test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/"
+  },
+  "devDependencies": {
+    "istanbul": "0.3.7",
+    "mocha": "~2.2.1"
+  },
+  "dependencies": {
+    "async": "0.9.0"
+  },
+  "files": [
+    "graph-suggestions/",
+    "HISTORY.md",
+    "LICENSE",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhurliman/node-graph-suggestions.git"
+  },
+  "keywords": [
+    "graph",
+    "recommender",
+    "personalized",
+    "pagerank",
+    "suggestions",
+    "friends",
+    "follow"
+  ],
+  "author": "John Hurliman <jhurliman@jhurliman.org> (http://jhurliman.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhurliman/node-graph-suggestions/issues"
+  },
+  "homepage": "https://github.com/jhurliman/node-graph-suggestions"
+}
