@@ -63,7 +63,13 @@ function reverseFetcher(nodeID, callback) {
 }
 ```
 
-## License
+## Additional Notes ##
+
+The algorithm used under the hood is [Personalized PageRank](http://nlp.stanford.edu/projects/pagerank.shtml). Starting from a given node, the graph is traversed a given number of degrees outward (defaulting to three). There are many great resources online describing PageRank and Personalized PageRank, but a quick summary is that nodes will be scored based on your likelihood to stumble upon them on a random walk through your local graph. A `forwardOnly` setting (defaulting off) toggles whether this random walk can follow directed edges in the reverse direction or not. If you have an undirected graph such as a Facebook-style symmetric friendship graph, you'll want to set `forwardOnly` to true to avoid redundant work.
+
+The implementation is based on a [blog post](http://blog.echen.me/2012/07/31/edge-prediction-in-a-social-graph-my-solution-to-facebooks-user-recommendation-contest-on-kaggle/) by Edwin Chen detailing a solution for Facebook's user recommendation challenge.
+
+## License ##
 
 [MIT](LICENSE)
 
