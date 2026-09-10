@@ -1,27 +1,24 @@
 {
   "name": "graph-suggestions",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Provides \"people you should follow\" or other graph-based recommendations",
   "scripts": {
-    "test": "mocha --bail --reporter spec test/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/"
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "test:types": "tsc --noEmit --strict --module nodenext --target es2022 type-tests/consumer.mts type-tests/consumer.cts"
   },
   "devDependencies": {
-    "istanbul": "0.3.7",
-    "mocha": "~2.2.1"
-  },
-  "dependencies": {
-    "async": "0.9.0"
+    "typescript": "7.0.2"
   },
   "files": [
     "graph-suggestions/",
     "HISTORY.md",
     "LICENSE",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">=22"
   },
   "repository": {
     "type": "git",
@@ -41,5 +38,7 @@
   "bugs": {
     "url": "https://github.com/jhurliman/node-graph-suggestions/issues"
   },
-  "homepage": "https://github.com/jhurliman/node-graph-suggestions"
+  "homepage": "https://github.com/jhurliman/node-graph-suggestions",
+  "main": "index.js",
+  "types": "index.d.ts"
 }

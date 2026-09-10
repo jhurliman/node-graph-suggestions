@@ -1,3 +1,4 @@
+var { describe, it } = require('node:test');
 var assert = require('assert');
 var suggestions = require('../');
 
@@ -22,7 +23,7 @@ describe('graph-suggestions', function() {
       }, Error);
     });
 
-    it('should return nothing for an empty graph', function(done) {
+    it('should return nothing for an empty graph', function(t, done) {
       suggestions.suggest('', { forwardOnly: true, forwardConnections: emptyFetcher }, function(err, results) {
         if (err) throw err;
 
@@ -32,7 +33,7 @@ describe('graph-suggestions', function() {
       });
     });
 
-    it('should return consistent results for a small friend graph, forward-only', function(done) {
+    it('should return consistent results for a small friend graph, forward-only', function(t, done) {
       suggestions.suggest('Andrew', { forwardOnly: true, forwardConnections: forwardFetcher }, function(err, results) {
         if (err) throw err;
 
@@ -47,7 +48,7 @@ describe('graph-suggestions', function() {
       });
     });
 
-    it('should return consistent results for a small friend graph, bi-directional', function(done) {
+    it('should return consistent results for a small friend graph, bi-directional', function(t, done) {
       suggestions.suggest('Andrew', { forwardConnections: forwardFetcher, reverseConnections: reverseFetcher },
         function(err, results)
       {
@@ -64,7 +65,7 @@ describe('graph-suggestions', function() {
       });
     });
 
-    it('should return consistent capped results', function(done) {
+    it('should return consistent capped results', function(t, done) {
       suggestions.suggest('Andrew', { maxResults: 3, forwardConnections: forwardFetcher, reverseConnections: reverseFetcher },
         function(err, results)
       {
