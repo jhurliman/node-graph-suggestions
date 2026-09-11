@@ -1,4 +1,4 @@
-## 2.0.0 — Unreleased
+## 2.0.0 — 2026-09-10
 
 - Require Node.js 22 or newer; replace legacy Mocha/Istanbul/async with the built-in test runner and native Promises.
 - Add Promise-based suggestion calls and providers, configurable concurrency, and TypeScript declarations while retaining callbacks.
